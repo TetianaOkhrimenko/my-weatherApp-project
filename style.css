@@ -163,3 +163,16 @@ p {
   font-weight: 300;
   margin-top: -20px;
 }
+.coder {
+  color: white;
+  text-align: center;
+  margin-left: -20em;
+  font-weight: 300;
+}
+.code-link {
+  text-decoration: none;
+  color: #51adcf;
+}
+.code-link:hover {
+  color: #0278ae;
+}
