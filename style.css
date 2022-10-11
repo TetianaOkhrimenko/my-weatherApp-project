@@ -1,0 +1,165 @@
+body,
+html {
+  height: 100%;
+}
+body {
+  background-image: url(images/moun2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h3 {
+  font-family: "Gelasio", serif;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-left: 60px;
+}
+p {
+  font-family: "Gelasio", serif;
+}
+
+.main-content-window {
+  max-width: 700px;
+  margin: 0 auto;
+  height: 500px;
+  background: linear-gradient(
+    to top,
+    #d5d4d0 0%,
+    #d5d4d0 1%,
+    #eeeeec 31%,
+    #efeeec 75%,
+    #e9e9e7 100%
+  );
+  border-radius: 20px;
+  margin-top: 4em;
+  opacity: 0.6;
+}
+.enter-city-input {
+  border: none;
+  border-radius: 20px;
+  margin-top: 4em;
+  margin-left: 4em;
+  padding: 10px 20px;
+  font-family: "Gelasio", serif;
+}
+.enter-city-input:focus {
+  outline: none;
+}
+
+.search-city-button,
+.current-button {
+  display: block;
+  border: none;
+  border-radius: 20px;
+  background: #51adcf;
+  font-family: "Gelasio", serif;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.266);
+  transition: all 200ms ease-in-out;
+}
+.search-city-button {
+  margin: -45px auto;
+  padding: 10px 25px;
+  margin-left: 20em;
+}
+
+.current-button {
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-left: 28em;
+}
+.search-city-button:hover,
+.current-button:hover {
+  background: #0278ae;
+}
+.day {
+  margin-top: 2em;
+  margin-left: 60px;
+  font-size: 18px;
+}
+
+.weather {
+  margin-top: -18px;
+  margin-left: 60px;
+  font-size: 16px;
+}
+.image-weather-today {
+  width: 100px;
+  margin-left: 13em;
+  margin-top: -10em;
+}
+.temp {
+  font-weight: 500;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  margin-left: 8em;
+  margin-top: -3em;
+}
+.other-info {
+  max-width: 200px;
+  padding: 20px 0px;
+  background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  border-radius: 20px;
+  margin-top: -6em;
+  margin-left: 27em;
+  height: 130px;
+  transition: transform 0.4s;
+}
+.other-info:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.other-info div {
+  margin: 5px 0px;
+}
+
+.other-info img {
+  width: 20px;
+  margin-left: 16px;
+}
+.other-info p {
+  margin: 0 5px;
+  display: inline;
+}
+
+.day-weather {
+  width: 100px;
+  height: 150px;
+  background: linear-gradient(
+    111.5deg,
+    rgb(187, 232, 255) 11.1%,
+    rgb(4, 78, 116) 107.5%
+  );
+  border-radius: 20px;
+  transition: transform 0.4s;
+  display: inline;
+  float: left;
+  text-align: center;
+  margin: 30px -2px;
+  margin-left: 33px;
+}
+
+.day-weather:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.p-day {
+  padding: 10px 0;
+}
+
+.day-weather img {
+  width: 60px;
+  margin-top: -30px;
+}
+
+.day-temp01 {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.day-temp02 {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: -20px;
+}
