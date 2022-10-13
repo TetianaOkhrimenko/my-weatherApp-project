@@ -51,7 +51,7 @@ function showCity(event) {
 function showTemperature(response) {
   city.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   temperature.innerHTML = `${Math.round(response.data.main.temp)} °C`;
-  todayWeather.innerHTML = `${response.data.weather[0].main}`;
+  todayWeather.innerHTML = `${response.data.weather[0].description}`;
   humidity.innerHTML = `${response.data.main.humidity}`;
   wind.innerHTML = `${Math.round(response.data.wind.speed)}`;
   document.querySelector(".enter-city-input").value = "";

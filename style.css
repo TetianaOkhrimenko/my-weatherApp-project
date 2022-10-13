@@ -81,6 +81,9 @@ p {
   margin-left: 60px;
   font-size: 16px;
 }
+.weather::first-letter {
+  text-transform: capitalize;
+}
 .image-weather-today {
   width: 100px;
   margin-left: 13em;
