@@ -55,6 +55,7 @@ function showTemperature(response) {
   humidity.innerHTML = `${response.data.main.humidity}`;
   wind.innerHTML = `${Math.round(response.data.wind.speed)}`;
   document.querySelector(".enter-city-input").value = "";
+  console.log(response.data);
 }
 
 formCity.addEventListener("submit", showCity);
@@ -62,7 +63,7 @@ formCity.addEventListener("submit", showCity);
 function handlePosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 
