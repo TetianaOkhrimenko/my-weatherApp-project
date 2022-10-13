@@ -22,6 +22,7 @@ let humidity = document.querySelector(".humidity");
 let wind = document.querySelector(".wind");
 let city = document.querySelector("h3");
 let formCity = document.querySelector(".form-enter-city");
+let icon = document.querySelector(".image-weather-today");
 
 //nextDay.forEach(function (day, i) {
 // day.innerHTML = days[currentDay + i + 1].slice(0, 3);
@@ -54,6 +55,10 @@ function showTemperature(response) {
   todayWeather.innerHTML = `${response.data.weather[0].description}`;
   humidity.innerHTML = `${response.data.main.humidity}`;
   wind.innerHTML = `${Math.round(response.data.wind.speed)}`;
+  //icon.setAttribute(
+  //  "src",
+  //  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  //);
   document.querySelector(".enter-city-input").value = "";
   console.log(response.data);
 }
