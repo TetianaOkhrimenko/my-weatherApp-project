@@ -24,10 +24,6 @@ let city = document.querySelector("h3");
 let formCity = document.querySelector(".form-enter-city");
 let icon = document.querySelector(".image-weather-today");
 
-//nextDay.forEach(function (day, i) {
-// day.innerHTML = days[currentDay + i + 1].slice(0, 3);
-//});
-
 if (currentHour < 10) {
   currentHour = `0${currentHour}`;
 }
@@ -49,8 +45,33 @@ function showCity(event) {
   searchCity(inputCity);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  return days[day].slice(0, 3);
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector(".day-weather");
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+  <div class="col-2 each-day-weather">
+<p class="p-day">${formatDay(forecastDay.dt)}</p>
+<img src="images/${forecastDay.weather[0].icon}.png">
+<p class="day-temp01">${Math.round(forecastDay.temp.max)} °C</p>
+<p class="day-temp02">${Math.round(forecastDay.temp.min)} °C</p>
+</div>
+`;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinats) {
@@ -66,10 +87,7 @@ function showTemperature(response) {
   todayWeather.innerHTML = `${response.data.weather[0].description}`;
   humidity.innerHTML = `${response.data.main.humidity}`;
   wind.innerHTML = `${Math.round(response.data.wind.speed)}`;
-  //icon.setAttribute(
-  //  "src",
-  //  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  //);
+  icon.setAttribute("src", `images/${response.data.weather[0].icon}.png`);
   document.querySelector(".enter-city-input").value = "";
   console.log(response.data);
   getForecast(response.data.coord);
