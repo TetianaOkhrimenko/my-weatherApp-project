@@ -52,11 +52,14 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
+  console.log(response.data);
+  let precipitation = document.querySelector(".today-precipitatipn");
+  precipitation.innerHTML = `${Math.floor(response.data.hourly[0].pop * 100)}%`;
   let forecast = response.data.daily;
   let forecastElement = document.querySelector(".day-weather");
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6 && index > 0) {
       forecastHTML =
         forecastHTML +
         `
