@@ -52,7 +52,6 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
   let precipitation = document.querySelector(".today-precipitatipn");
   precipitation.innerHTML = `${Math.floor(response.data.hourly[0].pop * 100)}%`;
   let forecast = response.data.daily;
@@ -78,7 +77,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinats) {
-  console.log(coordinats);
   let apiKey = "8c78e9e7e9928cd1a2a6f923072c3dec";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinats.lat}&lon=${coordinats.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -92,7 +90,6 @@ function showTemperature(response) {
   wind.innerHTML = `${Math.round(response.data.wind.speed)}`;
   icon.setAttribute("src", `images/${response.data.weather[0].icon}.png`);
   document.querySelector(".enter-city-input").value = "";
-  console.log(response.data);
   getForecast(response.data.coord);
 }
 
