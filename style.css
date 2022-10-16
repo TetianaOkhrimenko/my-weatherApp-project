@@ -73,13 +73,13 @@ p {
 .day {
   margin-top: 2em;
   margin-left: 60px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .weather {
   margin-top: -18px;
   margin-left: 60px;
-  font-size: 16px;
+  font-size: 18px;
 }
 .weather::first-letter {
   text-transform: capitalize;
@@ -163,7 +163,7 @@ p {
 .day-temp02 {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
   margin-top: -20px;
 }
 .coder {
