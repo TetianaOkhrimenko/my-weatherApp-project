@@ -86,14 +86,14 @@ p {
 }
 .image-weather-today {
   width: 100px;
-  margin-left: 13em;
+  margin-left: 230px;
   margin-top: -9em;
 }
 .temp {
   font-weight: 500;
   font-size: 40px;
   font-family: "Oswald", sans-serif;
-  margin-left: 8em;
+  margin-left: 335px;
   margin-top: -3em;
 }
 .other-info {
